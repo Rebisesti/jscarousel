@@ -31,6 +31,36 @@ header h3 {
     align-items: center;
 }
 
+.imagecarousel {
+    position: relative;
+}
+.image {
+    display: none;
+}
+.image:first-of-type {
+    display: block;
+}
+.image img {
+    border-radius: 10px;
+}
+
+.prev, .next {
+    top: 50%;
+    position: absolute;
+    font-size: 200%;
+    color: darkblue;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+    
+}
+
 
 footer {
     padding: 2em 0;
