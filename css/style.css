@@ -48,8 +48,11 @@ header h3 {
     top: 50%;
     position: absolute;
     font-size: 200%;
-    color: darkblue;
+    color: rgba(0, 0, 139, 0.5);
+    padding: .25em;
+    border-radius: 50vh;
     transform: translateY(-50%);
+    transition: all ease-in-out 300ms;
 }
 
 .prev {
@@ -61,6 +64,31 @@ header h3 {
     
 }
 
+.prev:hover, .next:hover {
+    background-color: black;
+    color: gold;
+    cursor: pointer;
+}
+
+.dots {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 9px;
+    
+}
+
+.dot {
+    /*width: 10px;
+    aspect-ratio: 1;*/
+    padding: 6px;
+    background-color: silver;
+    border-radius: 50vh;
+}
+
+.active {
+    background-color: gold;
+}
 
 footer {
     padding: 2em 0;
@@ -70,4 +98,13 @@ footer {
     justify-content: center;
     border-top: 3px ridge silver;
     margin-top: 2em;
+}
+
+.fadeout {
+    animation: fade 2000ms;
+}
+
+@keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
 }
